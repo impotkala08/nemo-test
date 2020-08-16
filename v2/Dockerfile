@@ -106,12 +106,7 @@ RUN cd /home/hpc/nemo/apps/nemo-4.0/cfgs/hpcx_linux_gfortran_gyre_pisces/EXP00 \
 && rm namelist_cfg \
 && wget https://raw.githubusercontent.com/soycoder/nemo/master/namelist_cfg
 
-
-
-
-
-
-
-
-
-
+# test impi
+RUN cd /home/hpc/nemo/tmp \
+&& wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/16814/l_mpi_2019.8.254.tgz \
+&& tar xf l_mpi_2019.8.254.tgz \
