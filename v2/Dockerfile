@@ -111,7 +111,8 @@ RUN cd /home/hpc/nemo/apps/nemo-4.0/cfgs/hpcx_linux_gfortran_gyre_pisces/EXP00 \
 RUN yum install -y gtk3 \
 yum install -y libXScrnSaver \
 yum install -y alsa-lib \
-yum install -y xorg-x11-server-common 
+yum install -y xorg-x11-server-common \
+
 
 RUN cd /home/hpc/nemo/tmp \ 
 && wget http://registrationcenter-download.intel.com/akdlm/IRC_NAS/tec/16783/vtune_profiler_2020_update2.tar.gz \
@@ -119,10 +120,9 @@ RUN cd /home/hpc/nemo/tmp \
 
 # test impi
 RUN cd /home/hpc/nemo/tmp \
-&& wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/16814/l_mpi_2019.8.254.tgz \
-&& tar xf l_mpi_2019.8.254.tgz \
+&& wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/16526/parallel_studio_xe_2020_update1_cluster_edition.tgz \
+&& tar xf parallel_studio_xe_2020_update1_cluster_edition.tgz \
 
-&& wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/16849/l_mkl_2020.2.254.tgz \
-&& tar xf l_mkl_2020.2.254.tgz \
-&& wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/16774/inspector_2020_update2.tar.gz \
-&& tar xf inspector_2020_update2.tar.gz \
+# yum install for intel
+yum install -y gtk2 \
+yum install -y pango \
